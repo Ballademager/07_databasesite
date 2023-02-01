@@ -1,12 +1,12 @@
 :root {
   --primary: #145873;
   --secondary: #b4b4b4;
-  /* --tertiary: #0f3d59; */
+  --tertiary: #0f3d59;
   --accent: #ff7d00;
   --black: #000000;
   --background: #ffffff;
 
-  --text-decoration-color: #c0bfc0;
+  --text-decoration-color: #b6b6b6;
   --text-decoration-color-hover: #272727;
   --input-border-color: #f6f6f6;
   --input-background-color: #f6f6f6;
@@ -32,6 +32,7 @@
 
   --fs-g: 1rem;
   --fs-p: calc(var(--fs-g) * 1.1);
+  --fs-c: calc(var(--fs-g) * 1.3);
   --fs-1: calc(var(--fs-g) * 2.8);
   --fs-2: calc(var(--fs-g) * 2);
   --fs-3: calc(var(--fs-g) * 1.5);
@@ -66,30 +67,75 @@
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
-  gap: 2rem;
+  gap: var(--space-xl);
+  margin: 0 1rem;
 }
 
 .productlist main h2 {
+  font-size: var(--fs-1);
   grid-column: 1/-1;
 }
 
 .productlist article {
   display: flex;
   flex-direction: column;
-  outline: 1px black solid;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  /* outline: 1px black solid; */
   /* max-width: 30vw; */
   /* height: auto; */
 }
+.productlist article a {
+  margin-top: auto;
+}
 .productlist article h3 {
-  font-size: 1rem;
-  flex-grow: 3;
+  font-size: var(--fs-c);
+  margin-top: var(--space-xs);
+  /* flex-grow: 3; */
 }
 .productlist article > * {
   margin: 0;
 }
-.subtle {
-  color: #d8d8d8cc;
+.productlist article :is(h3, p, a) {
+  padding: 0 var(--space-xxs);
 }
+
+.subtle {
+  color: var(--secondary);
+}
+.discounted {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.discounted :nth-child(2) {
+  background-color: var(--accent);
+  width: fit-content;
+  padding: var(--space-xxs);
+}
+
+.soldOut article {
+  position: relative;
+}
+.productlist article.soldOut img {
+  opacity: 0.5;
+}
+.smallProduct {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+/* .article:has(.soldOut) > article img {
+  opacity: 0.5;
+} */
+
+.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  background-color: var(--secondary);
+  font-size: var(--fs-3);
+  padding: var(--space-sm);
+  z-index: 100;
+  translate: 0 200%;
+}
+
 /* steals */
 body {
   padding: 0;
