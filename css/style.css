@@ -6,6 +6,16 @@
   --black: #000000;
   --background: #ffffff;
 
+  --text-decoration-color: #c0bfc0;
+  --text-decoration-color-hover: #272727;
+  --input-border-color: #f6f6f6;
+  --input-background-color: #f6f6f6;
+  --input-color: #343334;
+  --input-invalid-border-color: #ff7d87;
+  --input-checkbox-border-color: #d8d8d8;
+  --table-border-color: #d8d8d8;
+  --table-header-color: #d8d8d8;
+
   --space-xxs: calc(var(--space-sm) * 0.25);
   --space-xs: calc(var(--space-sm) * 0.5);
   --space-sm: 1rem;
@@ -36,10 +46,10 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-html {
-  background-color: var(--background);
-}
+
 .grid_1-1-1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -51,3 +61,66 @@ html {
   text-decoration: none;
   color: var(--black);
 }
+
+.productlist main {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  gap: 2rem;
+}
+
+.productlist main h2 {
+  grid-column: 1/-1;
+}
+
+.productlist article {
+  display: flex;
+  flex-direction: column;
+  outline: 1px black solid;
+  /* max-width: 30vw; */
+  /* height: auto; */
+}
+.productlist article h3 {
+  font-size: 1rem;
+  flex-grow: 3;
+}
+.productlist article > * {
+  margin: 0;
+}
+.subtle {
+  color: #d8d8d8cc;
+}
+/* steals */
+body {
+  padding: 0;
+  margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
+  font-weight: 400;
+  line-height: 1.563;
+  color: var(--color);
+  background-color: var(--background-color);
+  caret-color: var(--caret-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--text-decoration-color);
+  -webkit-text-decoration-color: var(--text-decoration-color);
+  /* fix colors */
+  border-radius: 5px;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    text-decoration-color: var(--text-decoration-color-hover);
+  }
+}
+/* steals */
