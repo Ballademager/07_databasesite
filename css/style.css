@@ -1,6 +1,53 @@
+:root {
+  --primary: #145873;
+  --secondary: #b4b4b4;
+  /* --tertiary: #0f3d59; */
+  --accent: #ff7d00;
+  --black: #000000;
+  --background: #ffffff;
+
+  --space-xxs: calc(var(--space-sm) * 0.25);
+  --space-xs: calc(var(--space-sm) * 0.5);
+  --space-sm: 1rem;
+  --space-md: calc(var(--space-sm) * 1.5);
+  --space-lg: calc(var(--space-sm) * 2);
+  --space-xl: calc(var(--space-sm) * 3);
+  --space-xxl: calc(var(--space-sm) * 6);
+
+  --ff: "open_sans", sans-serif, cursive;
+
+  --fw-n: 400;
+  --fw-m: 600;
+  --fw-b: 800;
+
+  --fs-g: 1rem;
+  --fs-p: calc(var(--fs-g) * 1.1);
+  --fs-1: calc(var(--fs-g) * 2.8);
+  --fs-2: calc(var(--fs-g) * 2);
+  --fs-3: calc(var(--fs-g) * 1.5);
+
+  --br-l: 10px;
+  --br-s: calc(var(--br-l) * 0.5);
+
+  color: var(--black);
+  font-family: var(--ff);
+  background-color: var(--background);
+}
+
 * {
   box-sizing: border-box;
 }
-body {
-  background: yellow;
+html {
+  background-color: var(--background);
+}
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xs);
+}
+.cat_box {
+  border: 1px solid var(--primary);
+  background-color: var(--secondary);
+  text-decoration: none;
+  color: var(--black);
 }
