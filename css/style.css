@@ -35,9 +35,9 @@
   --fs-g: 1rem;
   --fs-p: calc(var(--fs-g) * 1.1);
   --fs-c: calc(var(--fs-g) * 1.3);
-  --fs-1: calc(var(--fs-g) * 2.8);
-  --fs-2: calc(var(--fs-g) * 2);
   --fs-3: calc(var(--fs-g) * 1.5);
+  --fs-2: calc(var(--fs-g) * 2);
+  --fs-1: calc(var(--fs-g) * 2.8);
 
   --br-l: 10px;
   --br-s: calc(var(--br-l) * 0.5);
@@ -226,19 +226,30 @@ main {
   box-shadow: var(--dark) 0px 5px 15px 0px;
   /* background: var(--light); */
   background: var(--secondary);
-  width: fit-content;
+  max-width: 80%;
   padding: var(--space-sm);
   border-radius: var(--br-l);
 }
+.purchaseBox p {
+  text-align: center;
+}
 .purchaseBox h3 {
-  font-size: var(--fs-3);
+  font-size: calc(var(--fs-3) * 1.1);
   color: white;
 }
-.purchaseBox form label {
-  gap: var(--space-lg);
+.purchaseBox p {
+  font-size: var(--fs-c);
 }
-.product select {
-  min-width: 1000px;
+.purchaseBox form label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: var(--space-lg); */
+  font-size: var(--fs-c);
+  font-weight: var(--fw-m);
+}
+.one_product select {
+  font-size: var(--fs-c);
 }
 .purchaseBox button {
   display: block;
@@ -256,6 +267,21 @@ main {
 .info {
   grid-column: 2;
   box-shadow: var(--dark) 0px 5px 15px 0px;
+  max-width: 80%;
+  border-radius: var(--br-s);
+  padding: var(--space-md);
+  height: fit-content;
+}
+.info h2 {
+  font-weight: var(--fw-b);
+  font-size: calc(var(--fs-3) * 1.1);
+}
+.info dl {
+  font-size: var(--fs-p);
+  margin-top: var(--space-sm);
+}
+.info dt {
+  font-weight: var(--fw-m);
 }
 
 /* Header */
