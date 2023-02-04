@@ -22,26 +22,25 @@
     </header>
     <main>
         <h2>Accessories</h2>
-        <article class="smallProduct"><img src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp" alt="">
-            <h3>Deck Navy Blue Backpack</h3>
-            <p class="subtle">Backpacks | Puma</p>
-            <p class="price"><span>Prev.</span> DKK 1299,-</p>
-            <div class="discounted">
-                <p>Now DKK 585,-</p>
-                <p>-55%</p>
-            </div>
-            <a href="product.html">To Product</a>
-        </article>
-        <article class="smallProduct"><img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="">
+        <template id="smallProductTemplate">
+            <article class="smallProduct">
+                <img src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp" alt="">
+                <h3>Deck Navy Blue Backpack</h3>
+                <p class="subtle">Backpacks | Puma</p>
+                <p class="price"><span>Prev. DKK</span></p>
+                <div class="discounted">
+                    <p><span>Now DKK </span><span>585,-</span></p>
+                    <p>-55%</p>
+                </div>
+                <a href="product.html">See Product</a>
+            </article>
+        </template>
+        <!-- <article class="smallProduct"><img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="">
             <h3>Big Cat Backpack Black</h3>
             <p class="subtle">Backpacks | Puma</p>
             <p class="price">
-                <!-- <span>Prev.</span>  -->
                 DKK 1595,-
             </p>
-            <!-- <div class="discounted">
-          <p>Now DKK 1299,-</p>
-          <p>-55%</p> -->
             </div>
             <a href="product.html">To Product</a>
         </article>
@@ -49,13 +48,8 @@
             <h3>Grey Solid Round Neck T-Shirt</h3>
             <p class="subtle">Tshirts | Puma</p>
             <p class="price">
-                <!-- <span>Prev.</span>  -->
                 DKK 799,-
             </p>
-            <!-- <div class="discounted">
-                <p>Now DKK 585,-</p>
-                <p>-55%</p>
-            </div> -->
             <a href="product.html">To Product</a>
         </article>
         <article class="smallProduct soldOut"><img src="https://kea-alt-del.dk/t7/images/webp/640/1542.webp" alt="">
@@ -75,27 +69,21 @@
             <h3>Grey Leaping Cat T-shirt</h3>
             <p class="subtle">Backpacks | Puma</p>
             <p class="price"><span>Prev.</span> DKK 899,-</p>
-            <!-- <div class="discounted">
-                <p>Now DKK 585,-</p>
-                <p>-55%</p>
-            </div> -->
+            <p>Now DKK 585,-</p>
+            <p>-55%</p>
+            </div>
             <a href="product.html">To Product</a>
         </article>
         <article class="smallProduct soldOut"><img src="https://kea-alt-del.dk/t7/images/webp/640/1554.webp" alt="">
             <h3>Blue Sipper</h3>
             <p class="subtle">Water Bottle | Quechua</p>
             <p class="price">
-                <!-- <span>Prev.</span>  -->
                 DKK 249,-
             </p>
-            <!-- <div class="discounted">
-                <p>Now DKK 585,-</p>
-                <p>-55%</p>
-            </div> -->
             <a href="product.html">To Product</a>
-        </article>
+        </article> -->
     </main>
-    <script src="js/main.js"></script>
+    <script src="js/list.js"></script>
 </body>
 
 </html>

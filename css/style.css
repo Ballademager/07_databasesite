@@ -147,6 +147,9 @@ main {
 .productlist article :is(h3, p, a) {
   padding: 0 var(--space-xxs);
 }
+.productlist article.onSale .price span {
+  display: initial;
+}
 
 .subtle {
   color: var(--secondary);
@@ -156,7 +159,7 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.discounted :nth-child(2) {
+.discounted p:nth-child(2) {
   background-color: var(--accent);
   width: fit-content;
   padding: var(--space-xxs);
@@ -338,3 +341,12 @@ img {
     cursor: pointer;
   }
 }
+
+.notOnSale {
+  display: none;
+}
+
+/* forsøg med :has i stedet for js? men måske problematisk ift. loadorder
+article:has(.onSale) {
+
+} */
