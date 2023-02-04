@@ -7,10 +7,10 @@ fetch("https://kea-alt-del.dk/t7/api/products")
 //ovenstående = .then(showProducts)
 
 function showProducts(products) {
-  //ooper og kalder showProduct
+  //looper og kalder showProduct
   products.forEach(showProduct);
 
-  //ovenstående = products.forEach((product) => showProduct(product));
+  //ovenstående er det samme som = products.forEach((product) => showProduct(product));
 }
 
 function showProduct(product) {
@@ -20,6 +20,7 @@ function showProduct(product) {
   //lave en kopi
   const copy = template.cloneNode(true);
   //ændre indhold
+  // 3. But remember, you can .remove() things in your clone
   copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   copy.querySelector("h3").textContent = product.productdisplayname;
   copy.querySelector(".subtle").textContent = product.articletype;
