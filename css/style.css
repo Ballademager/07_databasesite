@@ -159,6 +159,12 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+
+.discounted p:nth-child(1) {
+  text-decoration: underline var(--accent) 2px;
+  text-underline-offset: 3px;
+}
+
 .discounted p:nth-child(2) {
   background-color: var(--accent);
   width: fit-content;
