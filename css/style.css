@@ -334,5 +334,7 @@ img {
   a:hover {
     text-decoration-color: var(--text-decoration-color-hover);
   }
+  .purchaseBox :is(button, select):hover {
+    cursor: pointer;
+  }
 }
-/* steals */
