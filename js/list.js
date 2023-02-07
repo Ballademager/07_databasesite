@@ -4,7 +4,7 @@ console.log("is js working?");
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 
-fetch("https://kea-alt-del.dk/t7/api/products?category=" + category + "&limit=50")
+fetch("https://kea-alt-del.dk/t7/api/products?category=" + category + "&limit=25")
   .then((res) => res.json())
   .then((data) => showProducts(data));
 //ovenstående = .then(showProducts)
