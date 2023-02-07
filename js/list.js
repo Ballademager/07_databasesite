@@ -1,13 +1,17 @@
 console.log("is js working?");
 // fetch("https://kea-alt-del.dk/t7/api/products?limit=100  ")
 
-fetch("https://kea-alt-del.dk/t7/api/products")
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
+fetch("https://kea-alt-del.dk/t7/api/products?category=" + category + "&limit=50")
   .then((res) => res.json())
   .then((data) => showProducts(data));
 //ovenstående = .then(showProducts)
 
 function showProducts(products) {
   //looper og kalder showProduct
+  document.querySelector("h2").textContent = category;
   products.forEach(showProduct);
 
   //ovenstående er det samme som = products.forEach((product) => showProduct(product));
