@@ -27,6 +27,8 @@ function showProduct(product) {
   copy.querySelector(".price").textContent = "Prev. DKK " + product.price + ",-";
   copy.querySelector(".discounted p:nth-child(2)").textContent = "-" + product.discount + "%";
 
+  copy.querySelector(".see_product").setAttribute("href", `product.html?id=${product.id}`);
+
   if (product.soldout) {
     copy.querySelector("article").classList.add("soldOut");
   }
